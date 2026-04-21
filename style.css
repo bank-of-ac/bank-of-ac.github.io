@@ -16,16 +16,46 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
+    radial-gradient(circle at 18% 12%, rgba(143, 46, 46, 0.22), transparent 12%),
+    radial-gradient(circle at 88% 28%, rgba(25, 23, 19, 0.26), transparent 18%),
+    linear-gradient(135deg, transparent 0 48%, rgba(25, 23, 19, 0.12) 48% 52%, transparent 52%),
     linear-gradient(90deg, rgba(25, 23, 19, 0.07) 1px, transparent 1px),
     linear-gradient(var(--paper), #d8cfb8);
-  background-size: 24px 24px, auto;
+  background-size: auto, auto, 180px 180px, 24px 24px, auto;
   font-family: Georgia, "Times New Roman", serif;
 }
 
 .layout {
+  position: relative;
   width: min(980px, calc(100% - 32px));
   margin: 0 auto;
   padding: 56px 0;
+}
+
+.layout::before,
+.layout::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.layout::before {
+  left: 4vw;
+  top: 14vh;
+  width: 32vw;
+  height: 18px;
+  background: rgba(25, 23, 19, 0.42);
+  transform: rotate(-14deg);
+}
+
+.layout::after {
+  right: 5vw;
+  bottom: 10vh;
+  width: 26vw;
+  height: 12px;
+  background: rgba(143, 46, 46, 0.36);
+  transform: rotate(9deg);
 }
 
 .hero {
