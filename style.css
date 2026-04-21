@@ -59,11 +59,54 @@ body {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 28px;
   color: var(--paper);
   background: var(--green);
   border: 6px double var(--brass);
   box-shadow: 10px 10px 0 rgba(13, 45, 36, 0.26);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(28deg, transparent 0 47%, rgba(244, 239, 225, 0.28) 47% 48%, transparent 48%),
+    linear-gradient(-18deg, transparent 0 54%, rgba(244, 239, 225, 0.16) 54% 55%, transparent 55%);
+}
+
+.broken-pane {
+  position: absolute;
+  background: rgba(214, 238, 232, 0.2);
+  border: 2px solid rgba(244, 239, 225, 0.34);
+  clip-path: polygon(14% 0, 100% 20%, 78% 100%, 0 66%);
+}
+
+.pane-one {
+  right: 38px;
+  top: 30px;
+  width: 74px;
+  height: 48px;
+  transform: rotate(18deg);
+}
+
+.pane-two {
+  right: 122px;
+  top: 88px;
+  width: 48px;
+  height: 64px;
+  transform: rotate(-28deg);
+}
+
+.pane-three {
+  left: 42px;
+  bottom: 30px;
+  width: 58px;
+  height: 38px;
+  transform: rotate(36deg);
 }
 
 .stamp {
