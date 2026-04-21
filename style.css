@@ -67,6 +67,22 @@ h1 {
   margin-top: 32px;
 }
 
+.notice {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 14px 18px;
+  color: var(--green-dark);
+  background: rgba(244, 239, 225, 0.88);
+  border: 3px solid var(--brass);
+}
+
+.notice strong {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .panel {
   min-height: 150px;
   display: grid;
